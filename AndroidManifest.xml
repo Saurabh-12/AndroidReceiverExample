@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.androidtest"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.androidtest.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.androidtest.MyPreferencesActivity"
+            android:label="@string/title_activity_my_preferences"
+            android:parentActivityName="android.preference.PreferenceActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="com.example.androidtest.ReceiverActivity"
+            android:label="@string/title_activity_receiver" >
+        </activity>
+
+        <service
+            android:name="com.example.androidtest.MessageService"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name" />
+
+        <receiver
+            android:name="com.example.androidtest.StaticLocalReceiver"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.example.androidtest.CUSTOM_INTENT" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.example.androidtest.SendOrderedBroadcastActivity"
+            android:label="@string/title_activity_send_ordered_broadcast" >
+        </activity>
+
+        <receiver android:name="com.example.androidtest.OrderedReceiverOne" >
+            <intent-filter android:priority="1" >
+                <action android:name="com.example.androidtest.OrderedBroadcast" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.example.androidtest.OrderedReceiverTwo" >
+            <intent-filter android:priority="2" >
+                <action android:name="com.example.androidtest.OrderedBroadcast" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.example.androidtest.PendingIntentExampleActivity"
+            android:label="@string/title_activity_pending_intent_example" >
+        </activity>
+
+        <receiver android:name="com.example.androidtest.MyPIReceiver" />
+
+        <activity
+            android:name="com.example.androidtest.NormalReceiverActivity"
+            android:label="@string/title_activity_normal_receiver" >
+        </activity>
+
+        <receiver
+            android:name="com.example.androidtest.MyNormalReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.example.androidtest.StaticBroadcastReceiver" />
+            </intent-filter>
+        </receiver>
+        
+    </application>
+
+</manifest>
