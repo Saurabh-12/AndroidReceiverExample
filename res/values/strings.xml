@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AndroidTest</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="hello_receiver">Hello Receiver!</string>
+    <string name="ordered_broadcast_activity">Hello OrderedBroadcastActivity</string>
+
+    <string-array name="listArray">
+        <item>Headings</item>
+        <item>Headings and Details</item>
+        <item>All Data</item>
+    </string-array>
+    <string-array name="listValues">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string name="title_activity_receiver">ReceiverActivity</string>
+    <string name="title_activity_send_ordered_broadcast">SendOrderedBroadcastActivity</string>
+    <string name="title_activity_pending_intent_example">PendingIntentExampleActivity</string>
+    <string name="title_activity_normal_receiver">NormalReceiverActivity</string>
+    <string name="normal_receiver_example">Welcome in Normal Receiver example</string>
+
+</resources>
